@@ -1,0 +1,219 @@
+<html>
+<head>
+	<style>
+		#lblFilterHead {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			font-size: 30px;
+		}
+
+		.divContainer {
+			background-color: #D3D3D3;
+			position: absolute;
+			top: 70px;
+			width: 500px;
+		}
+
+		.divFirstRow {
+			margin-top: 20px;
+		}
+
+		.divSecondRow {
+			margin-top: 20px;
+		}
+
+		.divThirdRow {
+			margin-top: 20px;
+		}
+
+		#btnAddNew {
+			position: absolute;
+			left: 10px;
+			top: 180px;
+			margin-top: 20px;
+		}
+		
+        #lblEntries {
+			font-size: 30px;
+			display: inline-block;
+			width: 400px;
+		}
+
+        #divEntries {
+			position: absolute;
+			top: 150px;
+			left: 10px;
+			margin-top: 100px;
+		}
+		
+		#divEntriesList {
+			background-color: #D3D3D3;
+			overflow-y: scroll; 
+			height: 400px;
+			width: 1000px;
+		}
+
+		#divEntriesHead {
+			margin-top: 20px;
+		}
+
+		.divEntriesCol1 {
+			display: inline-block;
+			width: 100px;
+		}
+
+		.divEntriesCol2 {
+			display: inline-block;
+			width: 100px;
+		}
+
+		.divEntriesCol3 {
+			display: inline-block;
+			width: 100px;
+		}
+
+		.divEntriesCol4 {
+			display: inline-block;
+			width: 550px;
+		}
+
+        .divEntriesRow {
+			position: relative;
+			width: 1000px;
+		}
+		.modal {
+   			 display: none; /* Hidden by default */
+    		position: fixed; /* Stay in place */
+    		z-index: 1; /* Sit on top */
+    		padding-top: 100px; /* Location of the box */
+    		left: 0;
+    		top: 0;
+    		width: 100%; /* Full width */
+    		height: 100%; /* Full height */
+    		overflow: auto; /* Enable scroll if needed */
+    		background-color: rgb(0,0,0); /* Fallback color */
+    		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+		.modal1 {
+   			 display: none; /* Hidden by default */
+    		position: fixed; /* Stay in place */
+    		z-index: 2; /* Sit on top */
+    		padding-top: 100px; /* Location of the box */
+    		left: 0;
+    		top: 0;
+    		width: 100%; /* Full width */
+    		height: 100%; /* Full height */
+    		overflow: auto; /* Enable scroll if needed */
+    		background-color: rgb(0,0,0); /* Fallback color */
+    		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+
+/* Modal Content */
+		.modal-content {
+    		background-color: #fefefe;
+    		margin: auto;
+    		padding: 20px;
+    		border: 1px solid #888;
+    		width: 50%;
+		}
+
+/* The Close Button */
+		.close {
+	    	color: #aaaaaa;
+    		float: right;
+    		font-size: 28px;
+    		font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+    		color: #000;
+    		text-decoration: none;
+    		cursor: pointer;
+		}
+	</style>
+	<script language="javascript" text="text/javascript" src="Main.js"></script>
+</head>
+
+<body onload="body_onload()">
+	<div id="Modalcommon" class="modal1">
+  		<div class="modal-content">
+			<label id="lblHeader">Attention</label>
+			<br>
+			<label id="errtext">err</label>
+			<br>
+			<button id="btnk">Okay</button>
+			<button id="btnyes">Yes</button>
+			<button id="btnno">No</button>
+  		</div>
+	</div>
+	<div id="ModalSignIn" class="modal">
+  		<div class="modal-content">
+    		<span class="close">&times;</span>
+			<label id="lblHeader">Time Log Sign In</label>
+			<br>
+			<label id="lblUsername">Employee ID:</label>
+			<input type="text" id="txtEmployeeID" />
+			<br>
+			<label id="lblPassword">Password:</label>
+			<input type="password" id="txtPassword" />
+			<br>
+			<button id="btnSignIn">Sign in</button>
+			<input type="checkbox" id="chkRemember"/>
+			<label id="lblRemember">Remember Employee ID</label>
+  		</div>
+	</div>
+	<div id="ModalEdit" class="modal">
+  		<div class="modal-content">
+    		<span class="close" onclick="closeit()" id="close12">&times;</span>
+			<label id="lblEmployeeID">Employee ID:</label>
+			<input type="text" id="txtEmployeeIDEdit"/>
+			<label id="lblHoursWorked">Hours Worked:</label>
+			<input type="text" id="txtHoursWorked"/>
+			<label id="lblDateWorked">Date Worked:</label>
+			<input type="date" id="txtDateWorked"/>
+			<label id="lblDescription">Description:</label>
+			<textarea id="txtDescription"></textarea>
+			<input type="checkbox" id="chkBillable"/>
+			<label id="lblBillable">Billable?</label>
+			<input type="button" id="btnSave" value="Save"/>
+			<input type="button" id="btnDelete" value="Delete"/>
+  		</div>
+	</div>
+	<div class="divFilter">
+		<label id="lblFilterHead">Filters</label>
+		<div class="divContainer">
+			<div class="divFirstRow">
+				<label id="lblDescContains">Description contains: </label>
+				<input type="text" id="txtDescContains">
+				<button id="btnRefresh">Refresh</button>
+			</div>
+			<div class="divSecondRow">
+				<label id="lblDateFrom">Date from:</label>
+				<input type="date" id="txtDateFrom">
+				<label id="lblDateThrough">through:</label>
+				<input type="date" id="txtDateThrough">
+			</div>
+			<div class="divThirdRow">
+				<input type="checkbox" id="chkShowCurrEmp"/>
+				<label id="lblShowCurrEmp">Show current employee only</label> 
+			</div>
+		</div>
+		<button id="btnAddNew">Add New</button>
+	</div>
+	<div id="divEntries">
+		<label id="lblEntries">Time Log Entries</label>
+		<label id="lblTotalHoursWorked"></label>
+		<div id="divEntriesHead">
+			<label class="divEntriesColl" onclick="sort(0)" id="col0">Employee ID</label>
+			<label class="divEntriesCol2" onclick="sort(1)" id="col1">Date</label>
+			<label class="divEntriesCol3" onclick="sort(2)" id="col2">Hours</label>
+			<label class="divEntriesCol4" onclick="sort(3)" id="col3">Description</label>
+		</div>
+		<div id="divEntriesList">
+		</div>
+	</div>
+
+</body>
+</html>

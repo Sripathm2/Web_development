@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 9</title>
+    <link rel="stylesheet" href="Assignment9.css" media="screen" type="text/css">
+    <script type="text/javascript" src="Assignment9.js"> </script>
+    <script language="javascript" type="text/javascript" src="https://unpkg.com/vue"></script>
+</head>
+<body onload="main()">
+<div class="SigninError" id="Singinerror">
+    <transition name="fade">
+        <div  v-if="showerrorsign">
+            <h1>Wrong UserId or Password</h1>
+        </div>
+    </transition>
+</div>
+<div class="adderror" id="Adderror">
+    <transition name="fade">
+        <div  v-if="showadderror">
+            <h1>{{ msg }}</h1>
+        </div>
+    </transition>
+</div>
+<div class="signin" id="signin">
+    <transition name="fade">
+        <div  v-if="show">
+            <h1 class="signin_heading">Jeopardy Questions Sign-in</h1>
+            <label class="signin_label1">User Id</label>
+            <input type="text" id="username" v-model="userid">
+            <br>
+            <label class="signin_label2">Password</label>
+            <input type="text" id="password" v-model="password">
+            <br>
+            <button class="signin_button" v-on:click="signin">Sign In</button>
+        </div>
+    </transition>
+</div>
+<div class="switch" id="switch">
+    <transition name="fade">
+        <div  v-if="showswitch">
+            <input type="radio" id="searchradio" value="searchpick" v-model="picked" v-on:click="switchTosearch" check="checked">
+            <label for="searchradio">Search</label>
+            <input type="radio" id="addradio" value="addpick" v-model="picked" v-on:click="switchToadd">
+            <label for="addradio">Add New</label>
+            <br>
+        </div>
+    </transition>
+</div>
+<div class="search" id="search">
+    <transition name="fade">
+        <div  v-if="showsearch">
+            <h1 class="search_heading">Jeopardy Questions</h1>
+            <label class="search_label1">Show questions containing</label>
+            <input type="text" id="questionContains" v-model="QuestionContains">
+            <label class="search_label2">Categoty Title</label>
+            <input type="text" id="Category Title" v-model="Cattitle">
+            <br>
+            <label class="search_label3">Air Date</label>
+            <input type="date" id="Airdate" v-model="airdate">
+            <label class="search_label4">Dollar Value</label>
+            <input type="number" id="dollarValue" v-model="dvalue">
+            <br>
+            <label class="search_label5">Answer Text</label>
+            <input type="text" id="answerText" v-model="anstxt">
+            <label class="search_label6">Show Number</label>
+            <input type="number" id="showNumber" v-model="shownum">
+            <br>
+            <button class="search_button" v-on:click="search">Search</button>
+        </div>
+    </transition>
+</div>
+<div class="add" id="add">
+    <transition name="fade">
+        <div  v-if="showadd">
+            <h1 class="add_heading">Add a new Question</h1>
+            <label class="add_label1">Category title</label>
+            <select v-model="selected">
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <label class="add_label2">Question text</label>
+            <input type="text" id="questiontext" v-model="Questiontext">
+            <br>
+            <label class="add_label3">Air Date</label>
+            <input type="date" id="Airdateadd" v-model="airdateadd">
+            <label class="add_label4">Dollar Value</label>
+            <input type="number" id="dollarValueadd" v-model="dvalueadd">
+            <br>
+            <label class="add_label5">Answer Text</label>
+            <input type="text" id="answerTextadd" v-model="anstxtadd">
+            <label class="add_label6">Show Number</label>
+            <input type="number" id="showNumberadd" v-model="shownumadd">
+            <br>
+            <button class="add_button" v-on:click="save">Save</button>
+            <button class="add_button" v-on:click="cancel">Cancel</button>
+        </div>
+    </transition>
+</div>
+<div id="result">
+    <transition name="fade">
+        <div  v-if="showresult">
+            <ul>
+                <li
+                is="result-list"
+                v-for="(item, index) in items"
+                v-bind:key="item.QuestionText"
+                v-bind:airdate="item.AirDate"
+                v-bind:answertext="item.AnswerText"
+                v-bind:categorytitle="item.CategoryTitle"
+                v-bind:dollarvalue="item.DollarValue"
+                v-bind:questiontext="item.QuestionText"
+                v-bind:shownumber="item.ShowNumber"
+                v-on:remove="items.splice(index, 1)"
+                ></li>
+            </ul>
+        </div>
+    </transition>
+</div>
+</body>
+</html>

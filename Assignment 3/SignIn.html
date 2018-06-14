@@ -1,0 +1,39 @@
+<html>
+<head>
+  <script type="text/javascript" src="SignIn.js"></script>
+<script type="text/javascript" src="Shared.js"></script>
+
+<title>Assignment 3 - Time Log v2 SignIn</title>
+
+<style type="text/css">
+body{
+  background-color:#fff0e3;
+}
+#box1{
+    position: absolute;
+    left:500px;
+    top:150px;
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+</style>
+</head>
+<body onload="mainSignIn()">
+    <fieldset id="box1">
+        <label id="heading">Time Log Sign In</label>
+        <br>
+        <br>
+        <label id="EmpIDlabel">Employee ID: </label>
+        <input type="text" id="EmpID"/>
+        <br>
+        <label id="Passwordlabel" style="padding-right:1.5em">Password:</label>
+        <input type="password" id="pswd">
+        <br>
+        <button type="button" id="Signin" onclick="Sign()">Sign In</button>
+        <br>
+        <input type="checkbox" id="remem">Remember Employee ID<br>
+    </fieldset>
+</body>
+</html>

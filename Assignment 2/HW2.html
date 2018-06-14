@@ -1,0 +1,93 @@
+<html>
+<head>
+<script type="text/javascript" src="HW2.js"></script>
+
+<title>Assignment 2 - Time Log v1</title>
+
+<style type="text/css">
+body{
+  background-color:#fff0e3;
+}
+#DateLabel{
+    padding-right: 3.5em
+}
+#savebut {
+    padding-left: 3.5em
+    height:20px;
+    text-align:center;
+}
+#box1{
+    position: absolute;
+    left:400px;
+    top:15px;
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+#box2{
+    position: absolute;
+    left:200px;
+    top:300px;
+    margin: 8px;
+    padding: 8px;    
+}
+.tg-le8v{
+    background-color:#c0c0c0;
+    vertical-align:top;
+}
+#table1{
+overflow-y:scroll;
+   height:200px;
+   display:block;
+   min-width:150px;
+}
+
+
+</style>
+</head>
+<body onload="getdata()">
+    <fieldset id="box1">
+        <label id="heading">Add New Entry</label>
+        <br>
+        <label id="EmpIDlabel">Employee ID: </label>
+        <input type="text" id="EmpID"/>
+        <label id="Hrworklabel">Hours Worked: </label>
+        <input type="text" id="HRwork" />
+        <br>
+        <label id="DateLabel">Date:</label>
+        <input type="date" id="date"/>
+        <input type="checkbox" id="bill">Billable?<br>
+        <label id="DescLabel">Description: </label>
+        <br>
+        <textarea rows="4" cols="50" id="Desc"></textarea>
+        <br>
+        <button type="button" id="savebut" onclick="savedata()">Save</button>
+    </fieldset>
+    <fieldset id="box2">
+        <label id="heading 2">Time Log entries</label>
+        <br>
+        <label id="totalhrsworked">Total Hours worked: </label>
+        <br>
+        <table id="table">
+        <tr>
+                  <th class="tg-le8v" style="min-width:150px">Employee</th>
+                  <th class="tg-le8v" style="min-width:150px">Date</th>
+                  <th class="tg-le8v" style="min-width:100px">Hours</th>
+                  <th class="tg-le8v" style="min-width:400px">Description</th>
+                  <th class="tg-le8v" style="min-width:100px">Edit</th>
+        </tr>
+        </table>
+        <table id="table1">
+        <tr>
+                  <th class="tg-le8v" style="min-width:150px"></th>
+                  <th class="tg-le8v" style="min-width:150px"></th>
+                  <th class="tg-le8v" style="min-width:100px"></th>
+                  <th class="tg-le8v" style="min-width:400px"></th>
+                  <th class="tg-le8v" style="min-width:100px"></th>
+        </tr>
+        </table>
+    </fieldset>
+
+</body>
+</html>

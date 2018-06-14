@@ -1,0 +1,50 @@
+<html>
+<head>
+<script type="text/javascript" src="Edit.js"></script>
+<script type="text/javascript" src="Shared.js"></script>
+<title>Assignment 3 - Time Log v2 Edit</title>
+
+<style type="text/css">
+body{
+  background-color:#fff0e3;
+}
+#DateLabel{
+    padding-right: 3.5em
+}
+#savebut {
+    padding-left: 3.5em
+    height:20px;
+    text-align:center;
+}
+#box1{
+    position: absolute;
+    left:400px;
+    top:100px;
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+</style>
+</head>
+<body onload="load()">
+    <fieldset id="box1">
+        <label id="heading">Add New Entry</label>
+        <br>
+        <label id="EmpIDlabel">Employee ID: </label>
+        <input type="text" id="EmpID"/>
+        <label id="Hrworklabel">Hours Worked: </label>
+        <input type="text" id="HRwork" />
+        <br>
+        <label id="DateLabel">Date:</label>
+        <input type="date" id="date"/>
+        <input type="checkbox" id="bill">Billable?<br>
+        <label id="DescLabel">Description: </label>
+        <br>
+        <textarea rows="4" cols="50" id="Desc"></textarea>
+        <br>
+        <button type="button" id="savebut" onclick="savedata()">Save</button>
+        <button type="button" id="deletebut" onclick="deletedata()">Delete</button>
+    </fieldset>
+</body>
+</html>

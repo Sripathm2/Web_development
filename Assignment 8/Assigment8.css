@@ -1,0 +1,172 @@
+body {
+    background:#e6f1f8;
+}
+
+/* User Interface Elements */
+
+#lblCheckAmount {
+    position:absolute;
+    left:0px;
+    top:15px;
+    width:150px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#errorcheckamt {
+    position:absolute;
+    left:400px;
+    top:10px;
+    width:600px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#errorsalestax {
+    position:absolute;
+    left:400px;
+    top:50px;
+    width:600px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#errortip {
+    position:absolute;
+    left:400px;
+    top:75px;
+    width:600px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+
+#lblSalesTaxPct {
+    position:absolute;
+    left:0px;
+    top:50px;
+    width:150px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#lblTipPct {
+    position:absolute;
+    left:0px;
+    top:85px;
+    width:150px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#lblSalesTaxAmount {
+    position:absolute;
+    left:0px;
+    top:120px;
+    width:150px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#lblTipAmount {
+    position:absolute;
+    left:0px;
+    top:155px;
+    width:150px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#txtCheckAmount {
+    position:absolute;
+    left:160px;
+    top:10px;
+    width:100px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#txtSalesTaxPct {
+    position:absolute;
+    left:160px;
+    top:45px;
+    width:100px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#txtTipPct {
+    position:absolute;
+    left:160px;
+    top:80px;
+    width:100px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#txtSalesTaxAmount {
+    position:absolute;
+    left:160px;
+    top:115px;
+    width:100px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#txtTipAmount {
+    position:absolute;
+    left:160px;
+    top:150px;
+    width:100px;
+    height:30px;
+    text-align:right;
+    font-family:Sans-Serif;
+    font-size:20px;
+}
+
+#btnTipPreTax {
+    position:absolute;
+    left:10px;
+    top:200px;
+}
+#btnPreTaxLabel {
+    position:absolute;
+    left:30px;
+    top:200px;
+    font-size:20px;
+}
+#btnTipOnTotal {
+    position:absolute;
+    left:150px;
+    top:200px;
+}
+#btnOnTotalLabel{
+    position:absolute;
+    left:200px;
+    top:200px;
+    font-size:20px;
+}

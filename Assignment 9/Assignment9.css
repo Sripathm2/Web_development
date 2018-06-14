@@ -1,0 +1,231 @@
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0
+}
+body{
+    background: rgba(23,131,255,0.29);
+}
+
+.SigninError{
+    background: rgba(255,4,27,0.38);
+    margin: auto;
+    width: 100%;
+    border: 3px solid darkred;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.adderror{
+    background: rgba(255,4,27,0.38);
+    margin: auto;
+    width: 100%;
+    border: 3px solid darkred;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.signin{
+    background: rgba(72,19,43,0.22);
+    margin: auto;
+    width: 100%;
+    border: 3px solid darkblue;
+    padding: 10px;
+}
+.signin_heading{
+    text-align: center;
+    font-size: 40px;
+}
+.signin_label1{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.signin_label2{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 32px;
+}
+.signin_button{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 32px;
+}
+.signin_button{
+    text-align: center;
+    font-size: 20px;
+    width:300px;
+    padding-left: 10px;
+}
+
+.switch{
+    background: rgba(42,184,255,0.38);
+    margin: auto;
+    width: 100%;
+    border: 3px solid darkblue;
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.search{
+    background: rgba(42,184,255,0.38);
+    margin: auto;
+    width: 100%;
+    border: 3px solid darkblue;
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+.search_heading{
+    text-align: center;
+    font-size: 40px;
+}
+.search_label1{
+     text-align: center;
+     font-size: 20px;
+     padding-left: 50px;
+     padding-right: 50px;
+ }
+.search_label2{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.search_label3{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 205px;
+}
+.search_label4{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 72px;
+    padding-right: 66px;
+}
+.search_label5{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 173px;
+}
+.search_label6{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 63px;
+}
+.search_button{
+    text-align: center;
+    font-size: 20px;
+    width:300px;
+    padding-left: 10px;
+}
+
+.add{
+    background: rgba(42,184,255,0.38);
+    margin: auto;
+    width: 100%;
+    border: 3px solid darkblue;
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+.add_heading{
+    text-align: center;
+    font-size: 40px;
+}
+.add_label1{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.add_label2{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.add_label3{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 205px;
+}
+.add_label4{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 245px;
+    padding-right: 55px;
+}
+.add_label5{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 173px;
+}
+.add_label6{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 220px;
+    padding-right: 50px;
+}
+.add_button{
+    text-align: center;
+    font-size: 20px;
+    width:300px;
+    padding-left: 10px;
+}
+
+
+.resultpane{
+    background: rgba(42,184,255,0.38);
+    margin: auto;
+    width: 100%;
+    border: 3px solid darkblue;
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+.resultlabel1{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.resultlabel2{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.resultlabel3{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.resultlabel4{
+    text-align: center;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 55px;
+}
+
+
+#atext{
+    display:none;
+}
+#qtext:hover + #atext{
+    display:block;
+}
+

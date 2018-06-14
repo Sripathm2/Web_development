@@ -1,0 +1,143 @@
+<html>
+<head>
+<script type="text/javascript" src="Assignment_1.js"></script>
+
+<title>Assignment 1 - Tip Calculator</title>
+
+<style type="text/css">
+body{
+  background-color:#fff0e3;
+}
+#heading{
+  position:absolute;
+  left:475px;
+  top:100px;
+  width:400px;
+  heigth:30px;
+  font-family:sans-serif;
+  font-size: 50px;
+}
+#check_amtlb{
+  position:absolute;
+  left:500px;
+  top:200px;
+  width:150px;
+  heigth:30px;
+  font-family:sans-serif;
+  font-size: 20px;
+}
+#check_amt{
+  position:absolute;
+  left:700px;
+  top:200px;
+  width:75px;
+  heigth:30px;
+  text-align: right;
+}
+#sale_taxlb{
+  position:absolute;
+  left:500px;
+  top:250px;
+  width:150px;
+  heigth:30px;
+  font-family:sans-serif;
+  font-size: 20px;
+}
+#sale_tax{
+  position:absolute;
+  left:700px;
+  top:250px;
+  width:75px;
+  heigth:30px;
+  text-align: right;
+}
+#tip_lb{
+  position:absolute;
+  left:500px;
+  top:300px;
+  width:150px;
+  heigth:30px;
+  font-family:sans-serif;
+  font-size: 20px;
+}
+#tip{
+  position:absolute;
+  left:700px;
+  top:300px;
+  width:75px;
+  heigth:30px;
+  text-align: right;
+}
+#sale_tax_outlb{
+  position:absolute;
+  left:500px;
+  top:350px;
+  width:150px;
+  heigth:30px;
+  font-family:sans-serif;
+  font-size: 20px;
+}
+#sale_tax_out{
+  position:absolute;
+  background-color:#D0D0D0;
+  left:700px;
+  top:350px;
+  width:75px;
+  heigth:30px;
+  text-align: right;
+}
+#tip_outlb{
+  position:absolute;
+  left:500px;
+  top:400px;
+  width:150px;
+  heigth:30px;
+  font-family:sans-serif;
+  font-size: 20px;
+}
+#tip_out{
+  position:absolute;
+  background-color:#D0D0D0;
+  left:700px;
+  top:400px;
+  width:75px;
+  heigth:30px;
+  text-align: right;
+}
+#pre_tax{
+  position:absolute;
+  background-color:white;
+  left:500px;
+  top:450px;
+  width:275px;
+  heigth:30px;
+  text-align: center;
+}
+#post_tax{
+  position:absolute;
+  background-color:white;
+  left:500px;
+  top:500px;
+  width:275px;
+  heigth:30px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+  <label id="heading">Tip Calculator</label>
+  <label id="check_amtlb">Check Amount</label>
+  <input type="text" id="check_amt">
+  <label id="sale_taxlb">Sales Tax %</label>
+  <input type="text" id="sale_tax" value="7.00">
+  <label id="tip_lb">Tip %</label>
+  <input type="text" id="tip" value="18.00">
+  <label id="sale_tax_outlb">Sales Tax </label>
+  <input type="text" id="sale_tax_out" readonly/>
+  <label id="tip_outlb">Tip Amount</label>
+  <input type="text" id="tip_out" readonly/>
+  <button type="button" id="pre_tax" onclick="pretax()">Tip Pre Tax</button>
+  <button type="button" id="post_tax" onclick="posttax()">Tip On Total</button>
+</body>
+</html>

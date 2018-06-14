@@ -1,0 +1,87 @@
+<html>
+<head>
+<script type="text/javascript" src="Main.js"></script>
+<script type="text/javascript" src="Shared.js"></script>
+<title>Assignment 3 - Time Log v2 Main</title>
+
+<style type="text/css">
+body{
+  background-color:#fff0e3;
+}
+#DateLabel{
+    padding-right: 3.5em
+}
+#addnew{
+    position: absolute;
+    left:900px;
+    top:100px;
+}
+#box1{
+    position: absolute;
+    left:400px;
+    top:50px;
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+#box2{
+    position: absolute;
+    left:200px;
+    top:300px;
+    margin: 8px;
+    padding: 8px;    
+}
+.tg-le8v{
+    background-color:#c0c0c0;
+    vertical-align:top;
+}
+#table1{
+overflow-y:scroll;
+   height:200px;
+   display:block;
+   min-width:150px;
+}
+</style>
+</head>
+<body onload="reload()">
+    <fieldset id="box1">
+        <label id="heading">Filters</label>
+        <br>
+        <label id="contains" style="padding-right: 0.5em">Contains: </label>
+        <input type="text" id="con"/>
+        <button type="button" id="refreshbut" style="float: right;" onclick="recheck()">Refresh</button>
+        <br>
+        <label id="DateLabel1">Date from:</label>
+        <input type="date" id="date1"/>
+        <label id="DateLabel2">through:</label>
+        <input type="date" id="date2"/>
+        <br>
+        <input type="checkbox" id="semponly">Show current employee only<br>
+    </fieldset>
+    <button type="button" id="addnew" onclick="edit(-1)">Add new</button>
+    <fieldset id="box2">
+        <label id="heading 2">Time Log entries</label>
+        <br>
+        <label id="totalhrsworked">Total Hours worked: </label>
+        <br>
+        <table id="table">
+        <tr>
+                  <th class="tg-le8v" style="min-width:150px">Employee</th>
+                  <th class="tg-le8v" style="min-width:150px">Date</th>
+                  <th class="tg-le8v" style="min-width:100px">Hours</th>
+                  <th class="tg-le8v" style="min-width:400px">Description</th>
+        </tr>
+        </table>
+        <table id="table1">
+        <tr>
+                  <th class="tg-le8v" style="min-width:150px"></th>
+                  <th class="tg-le8v" style="min-width:150px"></th>
+                  <th class="tg-le8v" style="min-width:100px"></th>
+                  <th class="tg-le8v" style="min-width:400px"></th>
+        </tr>
+        </table>
+    </fieldset>
+
+</body>
+</html>

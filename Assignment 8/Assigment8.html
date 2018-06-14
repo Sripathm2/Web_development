@@ -1,0 +1,37 @@
+﻿<html>
+<head>
+<title>Assignment 8</title>
+<script language="javascript" type="text/javascript" src="https://vuejs.org/js/vue.js"></script>
+<script language="javascript" type="text/javascript" src="Assigment8.js"></script>
+<link rel="stylesheet" type="text/css" href="Assigment8.css">
+</head>
+<body onload="main()">
+<div id="app">
+
+<label id="lblCheckAmount">Check Amount</label>
+<label id="lblSalesTaxPct">Sales Tax %</label>
+<label id="lblTipPct">Tip %</label>
+<label id="lblSalesTaxAmount">Sales Tax</label>
+<label id="lblTipAmount">Tip Amount</label>
+
+<label id="errorcheckamt">{{ errorcheckamt }}</label>
+<label id="errorsalestax">{{ errorsalestax }}</label>
+<label id="errortip">{{ errortip }}</label>
+
+<input type="text" id="txtCheckAmount" v-model="amt"/>
+<input type="text" id="txtSalesTaxPct" v-model="tax"/>
+<input type="text" id="txtTipPct" v-model="tip"/>
+<input type="text" id="txtSalesTaxAmount" readonly="readonly" v-model="taxamt"/>
+<input type="text" id="txtTipAmount" readonly="readonly" v-model="tipamt"/>
+
+<input type="radio" id="btnTipPreTax" name="choice" checked="checked" v-model="pick" v-bind:value="a">
+<label id="btnPreTaxLabel">Tip Pre Tax</label>
+
+<input type="radio" id="btnTipOnTotal" name="choice" v-model="pick" v-bind:value="b">
+<label id="btnOnTotalLabel">Tip On Total</label>
+
+</div>
+
+
+</body>
+</html>
